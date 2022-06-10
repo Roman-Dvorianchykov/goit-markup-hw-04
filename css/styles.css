@@ -27,8 +27,7 @@ body {
     padding-bottom: 94px;
 }
 
-h2,
-p{
+h2,p{
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -125,12 +124,47 @@ header {
     color: var(--secondary-text-color);
     padding-right: 0;
     padding-left: 50px;
+    
  }
 
  .auth-nav{
     display: flex;
     margin-left: auto;
  }
+
+.icon-smartphone,
+.icon-mailto{
+    margin-right: 10px;
+}
+
+.header-link.tel:hover .icon-smartphone{
+    --color4:var(--accent-color);
+}
+
+.header-link.mailto:hover .icon-mailto {
+    --color2: var(--accent-color);
+}
+
+
+/* .header-link.mailto::before {
+        display: inline-block;
+        content: "";
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        background-image: url("../images/icon-mailto.png");
+        background-size: contain;
+}
+
+.header-link.tel::before {
+display: inline-block;
+    content: "";
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    background-image: url("../images/icon-tel.png");
+    background-size: contain;
+} */
 
 .header-link:hover, 
 .header-link:focus{ 
@@ -174,14 +208,17 @@ header {
 /* hero - поменять фон текста на рамку  */
 
 .hero{
-    background-color: #2F303A;
+    /* background-color: #2F303A; */
     display: flex;
+    /* background-image: url("./images/hero-bg.jpg" "./images/Img Overlay.jpg"); */
 }
 
 .hero.section{
     padding-top: 200px;
     padding-bottom: 200px;
-}
+    background-image: url("../images/hero-bg.jpg");
+    }
+
 
 .hero-padding.container{
 padding-bottom: 0;
@@ -416,12 +453,6 @@ margin-right: 30px;
     margin-left: 8px;
 }
 
-
-
-
-/* ПИТАННЯ - НЕ УБИРАЄТЬСЯ ОСТАННІЙ МАРДЖИН за правилом last-child */
-
-
 .our-works-button-line .item:not(:last-child) {
     margin-left: 8px;
 }
@@ -573,3 +604,9 @@ margin-bottom: 30px;
 .footer-link:active {
     color: var(--primary-text-color);
 }
+
+
+/* background-image: linear-gradient(to bottom,
+    var(--background-color-hero-2),
+    var(--background-color-hero-2)),
+url(../images/Img-hero.jpg); */
