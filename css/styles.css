@@ -13,6 +13,7 @@
     --primary-text-color: #212121;
     --secondary-text-color: #757575;
     --accent-color: #2196F3;
+    --bgc-icon:#F5F4FA;
 }
 
 body {
@@ -25,6 +26,8 @@ body {
 .section{
     padding-top: 94px;
     padding-bottom: 94px;
+    max-width: 1600px;
+    margin: auto;
 }
 
 h2,p{
@@ -208,7 +211,8 @@ display: inline-block;
 /* hero - поменять фон текста на рамку  */
 
 .hero{
-    /* background-color: #2F303A; */
+   
+    
     display: flex;
     /* background-image: url("./images/hero-bg.jpg" "./images/Img Overlay.jpg"); */
 }
@@ -217,6 +221,15 @@ display: inline-block;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+    
+    max-height: 600px;
+
     }
 
 
@@ -307,8 +320,16 @@ margin-right: 30px;
         text-transform: uppercase;
 
         padding: 0;
-        margin: 0;
+        margin: 30px 0 0 0;
 }
+.our-features>li>div{
+    background-color: var(--bgc-icon);
+    padding: 25px 20px;
+    display: flex;
+    justify-content:center;
+    border-radius: 4px;
+}
+
 
 .section-text{
     color: var(--secondary-text-color);
@@ -384,7 +405,10 @@ margin-right: 30px;
 }
 
 .our-team-card{
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
     margin: 0 15px;
 }
 
@@ -414,17 +438,69 @@ margin-right: 30px;
 
     padding: 0;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 
+.list-socials{
+    display:flex;
+    padding: 0 27px 30px 27px;
+    margin: 0;
+}
+
+.list-socials>li>a{
+    
+    padding: 12px 12px;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.list-socials>li>a:hover{
+    background-color: var(--accent-color);
+}
+
+.list-socials>li>a:hover svg{
+    --color3:#ffffff;
+}
+
+
+/* Постоянные клиенты */
+
+.list-regular-clients {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.list-regular-clients>li>a {
+    height: 92px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 11.5px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.list-regular-clients>li>a:hover {
+    border: 1px solid var(--accent-color);
+}
+
+.list-regular-clients>li>a:hover svg {
+    --color3: var(--accent-color);
+    --color2: var(--accent-color);
+}
+
+.icon-foster-peters{
+    --color2: #AFB1B8;
+}
 
 
 /* our-works-button */
 
-.section.button-line{
-    padding-bottom: 0;
-
-}
 
 .our-works-button{
     color: var(--primary-text-color);
@@ -462,6 +538,10 @@ margin-right: 30px;
 .our-works-button:focus {
     color: #ffffff;
     background: var(--accent-color);
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .our-works-button:active {
@@ -499,6 +579,12 @@ margin-bottom: 30px;
 .our-works-list li:nth-last-child(-n+3){
     margin-bottom: 0;
 }
+.our-works-list li:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 
 .div-our-works{
     padding: 20px 24px;
@@ -578,10 +664,7 @@ margin-bottom: 30px;
 .list-footer-link>li:not(:last-child){
     margin-top: 0px;
     margin-bottom: 9px;
- 
 }
-
-
 
 .footer-link {
     color: rgba(255, 255, 255, 0.6);
@@ -605,8 +688,35 @@ margin-bottom: 30px;
     color: var(--primary-text-color);
 }
 
+.container.footer{
+    display: flex;
+}
 
-/* background-image: linear-gradient(to bottom,
-    var(--background-color-hero-2),
-    var(--background-color-hero-2)),
-url(../images/Img-hero.jpg); */
+.h3-list-socials>h3{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.h3-list-socials{
+    margin-left: 70px;
+    padding-bottom: 20px;
+}
+
+.list-socials.footer{
+    padding:0;
+}
+
+
+.list-socials.footer>li>a {
+    background-color: rgba(255, 255, 255, 0.1);
+    --color3: #ffffff;
+}
+
+.list-socials.footer>li>a:hover {
+    background-color: var(--accent-color);
+}
+
